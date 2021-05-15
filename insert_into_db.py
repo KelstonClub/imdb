@@ -1,5 +1,4 @@
 import gzip
-import pprint
 import csv
 import sqlite3
 
@@ -11,7 +10,7 @@ def data_from_file(filename):
     for n, row in enumerate(csv_reader):
         if n == 0: continue
         yield row
-        if n >= 1_000_000: break
+        if n >= 1000: break
 
 
 def dictionary_of_data(filename):
